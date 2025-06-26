@@ -1,0 +1,3 @@
+[submodule "Faithconnectapp"]
+	path = Faithconnectapp
+	url = https://github.com/permanent-dev/faithconnectapp.git
