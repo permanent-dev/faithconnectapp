@@ -5,7 +5,19 @@ import '../index.css'
 import '../components/inputsstyle.css'
 import '../components/headerstyle.css'
 import { Link } from 'react-router-dom'
-import { Submit } from './login'
+
+
+
+
+
+
+
+
+
+// function Submit() {
+
+// };
+// export { Submit };
 
 const Register = () => {
     return (
@@ -19,7 +31,7 @@ const Register = () => {
                             <Forms label="full name" />
                             <Forms label="email" />
                             <Forms label="password" typeof="password" />
-                            <button onClick={Submit} className='buttton'>sign up</button>
+                            <button className='buttton'>sign up</button>
 
 
                         </form>
@@ -32,7 +44,7 @@ const Register = () => {
                         </div>
                         <p className='text-xl mt-7'>Have an account already ?
                             <span className='text-[#223399] capitalize'>
-                                <Link to="/" > log in</Link>
+                                <Link to="/login" > log in</Link>
                             </span>
                         </p>
                     </div>

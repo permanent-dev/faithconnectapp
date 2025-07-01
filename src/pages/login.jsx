@@ -9,10 +9,6 @@ import { Link } from 'react-router-dom'
 
 
 
-function Submit() {
-
-};
-export { Submit };
 
 
 
@@ -38,7 +34,7 @@ const Login = () => {
                         <Formheader headers="log in" />
                         <Forms label="username" />
                         <Forms label="password" />
-                        <div ><button onClick={Submit} className='buttton'>log in</button></div>
+                        <div ><button className='buttton'>log in</button></div>
 
                     </form>
                     <div className='justify-center grid capitalize border-t-[2px] mt-[2rem]'>
