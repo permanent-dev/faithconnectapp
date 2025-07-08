@@ -23,7 +23,7 @@ const Footersection = () => {
             <li className='text-[1.5rem]'><Link to="/podcast" onClick={toggleMenu}>podcast</Link></li>
             <li className='text-[1.5rem]'><Link to="/events" onClick={toggleMenu}>events</Link></li>
             <li className='text-[1.5rem]'><Link to="/blog" onClick={toggleMenu}>blog</Link></li>
-            <li className='text-[1.5rem]'><Link to="/about us" onClick={toggleMenu}>about us</Link></li>
+            <li className='text-[1.5rem]'><Link to="/aboutus" onClick={toggleMenu}>about us</Link></li>
           </ul>
         </div>
         <div className='flex flex-col justify-center capitalize items-center'>

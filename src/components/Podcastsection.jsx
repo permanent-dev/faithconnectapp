@@ -20,7 +20,7 @@ const Podcastsection = () => {
           <p className='text-[24px] md:w-[45rem] leading-9'>
             We have the best podcast about spiritual talks and daily devotionals that u can always listen to on the go
           </p>
-          <StarIcon className='rounded-full absolute top-5 md:top-9 left-35 md:right-186 ' strokeWidth={4} color="black" />
+          <StarIcon className='rounded-full absolute top-5 md:top-3 left-35 md:right-186 ' strokeWidth={4} color="black" />
           <StarIcon className='rounded-full absolute top-39 md:top-58 left-45 md:left-115 p-[6px] bg-[orange]' strokeWidth={3} size={45} color="black" />
 
         </div>
@@ -36,7 +36,7 @@ const Podcastsection = () => {
 
       </div>
       <div className='grid grid-col-1 items-center justify-center relative'>
-        <img src="/image.png" alt="podcast banner" />
+        <img className='z-[-1]' src="/image.png" alt="podcast banner" />
         <p className='capitalize absolute top-2 md:top-18 left-5 md:left-155 text-[2rem] md:text-[4rem] font-bold text-center'>join our 24hrs podcast</p>
       </div>
     </>
