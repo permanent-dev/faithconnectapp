@@ -10,6 +10,7 @@ import Aboutus from './pages/Aboutus'
 import { Blog } from './pages/Blog'
 import Book from './pages/Book'
 import Dashboard from './pages/Dashboard'
+import Dashpodcast from './pages/Dashpodcast'
 
 function App() {
 
@@ -24,7 +25,8 @@ function App() {
         <Route path="/books" element={<Book />}></Route>
         <Route path="aboutus" element={<Aboutus />}></Route >
         <Route path="blog" element={<Blog />}></Route>
-        <Route path='/dashboard' element={<Dashboard />}></Route>
+        <Route path='dashboard/home' element={<Dashboard />}></Route>
+        <Route path="dashboard/podcast" element={<Dashpodcast />}></Route>
 
 
       </Routes>
