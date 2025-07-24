@@ -7,7 +7,7 @@ function Inspiration() {
                 className="bg-[#ffffff] border-[12px] p-1 shadow-[2px_2px_0.2rem_#000000] border-transparent mt-[9px] hover:scale-101 rounded-[1.2rem]">
                 <div className="flex gap-1">
                     <span> <img src="/Vector.png" alt="" /> </span>
-                    <span>
+                    <span className='md:w-85'>
                         <p className="capitalize font-bold text-[22px] ">daily
                             inspiration
                         </p>
@@ -16,7 +16,7 @@ function Inspiration() {
                     </span>
                 </div>
                 <div>
-                    <p className="w-[16rem] text-[1.4rem]">
+                    <p className="w-[16rem] md:w-[25rem] text-[1.4rem]">
                         “This is the day that
                         the Lord has made; Let
                         us rejoice and be glad

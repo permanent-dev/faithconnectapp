@@ -12,16 +12,16 @@ import Activities from '../components/Activities'
 function Dashboard() {
     return (
         <div>
-            <div className='w-[85rem] mx-auto my-14 flex bg-gray-100 rounded-[1.8rem] shadow-[4px_4px_1rem_#674538]'>
+            <div className='min-h-screen flex bg-gray-100 min-w-screen rounded-[1.8rem] shadow-[2px_2px_5px_#040404]'>
                 <aside>
                     <Dashnav />
 
                 </aside>
-                <div>
+                <div className='w-screen'>
                     <header>
                         <Dashheader />
                     </header>
-                    <div className='flex gap-9 ml-4'>
+                    <div className='flex justify-around ml-3'>
                         <div>
                             <div>
                                 <Dashitems />
@@ -30,7 +30,7 @@ function Dashboard() {
                             <div>
                                 <Dashsearch />
                             </div>
-                            <div className='flex ml-[1rem] gap-[0.8rem]'>
+                            <div className='flex ml-[3px] gap-[0.8rem] md:gap-[5rem]'>
                                 <div>
                                     <Topusers />
                                 </div>

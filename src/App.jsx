@@ -11,6 +11,7 @@ import { Blog } from './pages/Blog'
 import Book from './pages/Book'
 import Dashboard from './pages/Dashboard'
 import Dashpodcast from './pages/Dashpodcast'
+import Dashbooks from './pages/Dashbooks'
 
 function App() {
 
@@ -22,11 +23,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Onboarding />} />
         <Route path='/podcast' element={<Podcast />} />
-        <Route path="/books" element={<Book />}></Route>
-        <Route path="aboutus" element={<Aboutus />}></Route >
-        <Route path="blog" element={<Blog />}></Route>
-        <Route path='dashboard/home' element={<Dashboard />}></Route>
-        <Route path="dashboard/podcast" element={<Dashpodcast />}></Route>
+        <Route path="/books" element={<Book />} />
+        <Route path="aboutus" element={<Aboutus />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path='dashboard/home' element={<Dashboard />} />
+        <Route path="dashboard/podcast" element={<Dashpodcast />} />
+        <Route path="dashboard/book" element={<Dashbooks />} />
 
 
       </Routes>

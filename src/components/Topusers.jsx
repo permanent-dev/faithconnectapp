@@ -11,11 +11,11 @@ function Topusers() {
 
 
     return (
-        <div className='ml-3 my-2'>
+        <div className='ml-1 my-2'>
             <h1 className='capitalize text-[1.6rem] font-bold text-shadow-[2px_2px_6px_#343434]'>
                 top users
             </h1>
-            <div className='bg-[white] p-2 mt-1 space-y-3 rounded-[1.6rem] hover:scale-102 shadow-[2px_2px_0.3rem_#000000]'>
+            <div className='bg-[white] md:w-85 p-2 mt-1 space-y-3 rounded-[1.6rem] hover:scale-102 shadow-[2px_2px_0.3rem_#000000]'>
                 <div className='flex space-x-3 items-center bg-gray-300 p-2 rounded-[32px] '>
                     <img src="/bg2.png" alt="" className='size-19 rounded-[50%]' />
                     <div>

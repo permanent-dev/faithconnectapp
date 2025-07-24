@@ -4,8 +4,8 @@ function Streak() {
     return (
         <div>
             <div
-                className="bg-[#ffffff] border-[12px] hover:scale-101 shadow-[2px_2px_0.3rem_#000000] border-transparent rounded-[1.2rem]">
-                <span className="flex gap-26 justify-around md:gap-[3rem]">
+                className="bg-[#ffffff] border-[12px] w-80 md:w-110 hover:scale-101 shadow-[2px_2px_0.3rem_#000000] border-transparent rounded-[1.2rem]">
+                <span className="flex gap-30 justify-around md:gap-[3rem]">
                     <p className="text-[19px] font-bold">weekly streak
                         <i className="fa-solid fa-circle-exclamation"></i>
                     </p>
@@ -16,7 +16,7 @@ function Streak() {
                         <i className="fa-solid fa-arrow"></i>
                     </p>
                 </span>
-                <div className="border-gray-600 border-[1px]  m-[4px]"></div>
+                <div className="border-gray-600 border-[1px] m-[4px]"></div>
                 <div className="flex gap-46 justify-around md:gap-[9rem]">
                     <p className="font-bold text-[17px]">4/4 weeks</p>
                     <span className="">

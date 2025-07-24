@@ -8,17 +8,17 @@ function Activities() {
     return (
         <div>
             {/* <!--right side of big screen --> */}
-            <div className="bg-[#ffffff] rounded-[2rem] mt-[1rem] p-2 shadow-[3px_3px_0.5rem_#000000]">
-                <div className="flex gap-21 justify-between ">
+            <div className="bg-[#ffffff] rounded-[2rem] mt-[1rem] space-x-1 md:space-x-16 p-2 shadow-[3px_3px_0.5rem_#000000]">
+                <div className="flex justify-between ">
                     <h3 className="mt-[0.5rem] capitalize text-[1.4rem] font-bold">
                         today's activities
                     </h3>
                     <span className="">
-                        <img src="images/Dots Three.png" alt="" />
+                        <img src="/Dots Three.png" alt="" />
                     </span>
                 </div>
 
-                <div className="grid grid-cols-3 justify-around mt-[2.8rem]">
+                <div className="grid grid-cols-3 justify-around ml-4 mt-[2.8rem]">
                     <span className="leading-7">
                         <span className="bg-[#e9a923] rounded-full p-2 font-extrabold text-[2rem] text-center">
                             22
@@ -48,7 +48,7 @@ function Activities() {
                 <div>
 
 
-                    <div className="mt-24 mb-8 relative flex items-end gap-4 h-[25rem] px-6">
+                    <div className="mt-24 mb-8 relative flex items-end gap-7 h-[25rem] px-6">
                         {/* Y-axis values */}
                         <div className="flex flex-col space-y-[18px] h-full mr-1 text-[1.2rem] leading-none">
                             {[100, 90, 80, 70, 60, 50, 40, 30, 20, 10].map((val) => (

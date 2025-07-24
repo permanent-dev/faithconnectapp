@@ -13,7 +13,7 @@ function Dashheader() {
 
 
     return (
-        <div className='flex justify-between gap-[12.7rem] mt-[31px] items-center'>
+        <div className='flex justify-between mt-[31px] max-w-screen gap-45 items-center '>
             <div className='capitalize font-bold text-[1.7rem] font-bold p-1 flex justify-center items-center gap-1 '>
                 <p >
                     welcome!

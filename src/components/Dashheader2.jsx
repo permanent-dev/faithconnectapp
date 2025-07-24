@@ -9,10 +9,10 @@ function Dashheader2() {
 
 
     return (
-        <div className='flex justify-between gap-[25rem] mt-[31px] items-center'>
-            <div className='capitalize font-bold text-[3.4rem] font-bold p-1 flex justify-center items-center gap-1 '>
+        <div className='flex justify-between mt-[31px] items-center'>
+            <div className='capitalize font-bold text-[3.4rem] font-bold p-1 items-center gap-1 '>
                 <p >
-                    welcome!
+                    podcasts!
                 </p>
 
 

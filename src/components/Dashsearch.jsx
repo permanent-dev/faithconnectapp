@@ -19,10 +19,10 @@ function Dashsearch() {
 
     return (
         <div>
-            <div className="flex gap-[10rem] my-5 ml-4">
+            <div className="flex gap-[5rem] md:gap-[15rem] my-5 ml-4">
                 <div className="bg-[#ffffff] rounded-[12rem] flex items-center justify-center p-[3px] ">
                     <Search className="fa-solid fa-search" />
-                    <input onChange={handleSubmit} type="search" className="p-2 rounded-full" placeholder="Search Home" value={searchTerm} />
+                    <input onChange={handleSubmit} type="search" className="p-2 px-[12px] md:w-135 rounded-full" placeholder="Search Home" value={searchTerm} />
                 </div>
                 <div>
                     <button
