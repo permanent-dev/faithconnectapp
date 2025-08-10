@@ -23,7 +23,7 @@ function Podsearch() {
             <div className="my-3 ml-3">
                 <div className="bg-[#ffffff] rounded-[12rem] shadow-[3px_3px_6px_#778457] flex py-1 items-center  ">
                     <Search className="fa-solid fa-search ml-2" />
-                    <input onChange={handleChange} id="true" type="search" className="px-[20px] w-155 py-2 rounded-full" placeholder="Search Podcasts" value={searchTerm} />
+                    <input onChange={handleChange} id="true" type="search" className="px-[20px] w-125 py-2 rounded-full" placeholder="Search Podcasts" value={searchTerm} />
                 </div>
                 {/* <div>
                         <button

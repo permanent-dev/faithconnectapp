@@ -3,6 +3,7 @@ import Dashnav from '../components/Dashnav'
 import Bookherosection from '../components/Bookherosection'
 import { BellDotIcon } from 'lucide-react'
 import Podsearch from '../components/Podsearch'
+import BookCategoryGrid from '../components/BookCategoryGrid'
 
 function Dashbooks() {
 
@@ -85,8 +86,12 @@ function Dashbooks() {
                 <div>
                     <Bookherosection />
                 </div>
-                <div>
+                <div className='flex'>
                     <Podsearch />
+                    <div></div>
+                </div>
+                <div>
+                    <BookCategoryGrid />
                 </div>
 
             </div>
