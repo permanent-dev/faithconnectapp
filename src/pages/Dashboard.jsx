@@ -17,11 +17,11 @@ function Dashboard() {
                     <Dashnav />
 
                 </aside>
-                <div className='w-screen'>
+                <div className='md:w-screen'>
                     <header>
                         <Dashheader />
                     </header>
-                    <div className='flex justify-around ml-3'>
+                    <div className='flex justify-around ml-1'>
                         <div>
                             <div>
                                 <Dashitems />
@@ -30,7 +30,7 @@ function Dashboard() {
                             <div>
                                 <Dashsearch />
                             </div>
-                            <div className='flex ml-[3px] gap-[0.8rem] md:gap-[5rem]'>
+                            <div className='flex ml-[3px] gap-[0.2rem] md:gap-[5rem]'>
                                 <div>
                                     <Topusers />
                                 </div>

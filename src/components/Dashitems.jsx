@@ -3,7 +3,7 @@ import React from 'react'
 function Dashitems() {
     return (
         <div>
-            <div className="mt-2 gap-8 md:gap-35 ml-6 p-2 flex">
+            <div className="mt-2 justify-around ml-6 p-2 flex">
                 <div className="bg-[#ffffff] shadow-[3px_3px_7px_#000000] rounded-[1.5rem] py-5 hover:scale-108">
                     <span className="font-bold text-[1.5rem] capitalize flex p-1">
                         <img src="images/Podcastlogo.png" alt="" />

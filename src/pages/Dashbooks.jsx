@@ -18,11 +18,11 @@ function Dashbooks() {
 
 
     return (
-        <div className='min-h-screen flex bg-gray-100 min-w-screen rounded-[1.8rem] shadow-[2px_2px_5px_#040404]'>
+        <div className='min-h-screen flex bg-gray-100 max-w-screen rounded-[1.8rem] shadow-[2px_2px_5px_#040404]'>
             <aside>
                 <Dashnav />
             </aside>
-            <div className='w-screen'>
+            <div className='md:w-screen'>
                 <header>
                     <div className='flex justify-between mt-[31px] items-center'>
                         <div className='capitalize font-bold text-[3.4rem] font-bold p-1 items-center gap-1 '>

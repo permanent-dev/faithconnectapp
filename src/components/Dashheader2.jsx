@@ -1,5 +1,8 @@
 import React from 'react'
 import { BellDotIcon } from 'lucide-react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { SplitText } from 'gsap/all'
 
 function Dashheader2() {
     const Users = [
@@ -7,11 +10,25 @@ function Dashheader2() {
 
     ]
 
+    useGSAP(() => {
+        const para = new SplitText('#des', { type: 'chars, words' });
+        gsap.from(para.chars,
+            {
+                ease: 'expo.out',
+                stagger: '0.09',
+                y: '25',
+                duration: 1,
+                scrub: true,
+
+            })
+
+    }, [])
+
 
     return (
         <div className='flex justify-between mt-[31px] items-center'>
             <div className='capitalize font-bold text-[3.4rem] font-bold p-1 items-center gap-1 '>
-                <p >
+                <p id='des' >
                     podcasts!
                 </p>
 

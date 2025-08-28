@@ -11,10 +11,10 @@ export default function Dashpodcast() {
     return (
         <div >
             <div className=' flex bg-gray-100 min-h-screen min-w-screen rounded-[1.8rem]'>
-                <aside>
+                <aside className='min-h-screen'>
                     <Dashnav />
                 </aside>
-                <div className='w-screen'>
+                <div className='md:w-screen'>
                     <header>
                         <Dashheader2 />
                     </header>
