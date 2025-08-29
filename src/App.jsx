@@ -1,4 +1,4 @@
-import { ScrollTrigger, SplitText } from "gsap/all"
+import { ScrollTrigger, SplitText,  } from "gsap/all"
 import gsap from "gsap"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Register from './pages/Register'
@@ -15,7 +15,7 @@ import Dashpodcast from './pages/Dashpodcast'
 import Dashbooks from './pages/Dashbooks'
 
 
-gsap.registerPlugin( ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, );
 
 function App() {
 
@@ -28,11 +28,11 @@ function App() {
         <Route path="/" element={<Onboarding />} />
         <Route path='/podcast' element={<Podcast />} />
         <Route path="/books" element={<Book />} />
-        <Route path="aboutus" element={<Aboutus />} />
-        <Route path="blog" element={<Blog />} />
-        <Route path='dashboard/home' element={<Dashboard />} />
-        <Route path="dashboard/podcast" element={<Dashpodcast />} />
-        <Route path="dashboard/book" element={<Dashbooks />} />
+        <Route path="/aboutus" element={<Aboutus />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path='/dashboard/home' element={<Dashboard />} />
+        <Route path="/dashboard/podcast" element={<Dashpodcast />} />
+        <Route path="/dashboard/book" element={<Dashbooks />} />
 
 
       </Routes>

@@ -18,7 +18,6 @@ function Dashheader2() {
                 stagger: '0.09',
                 y: '25',
                 duration: 1,
-                scrub: true,
 
             })
 
