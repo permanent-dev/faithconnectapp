@@ -23,7 +23,7 @@ const Register = () => {
     return (
         <>
             <div>
-                <div className="flex-col-1 md:flex gap-10 md:gap-45 justify-center border-[3px] rounded-[2rem] mt-[2rem] mx-auto shadow-[2px_2px_4px_#222227] w-[80vw]">
+                <div className="flex-col-1 md:flex gap-10 md:gap-45 justify-center rounded-[2rem] mt-[2rem] mx-auto shadow-[2px_2px_4px_#222227] w-[80vw]">
                     <div className="left">
                         <div><img src="public/ChatGPT_Image_Jun_3__2025__04_38_53_PM-removebg-preview 1.png" alt="" /></div>
                         <form action="">
@@ -49,9 +49,9 @@ const Register = () => {
                         </p>
                     </div>
                     <div className="right">
-                        <img src="public/Mask group.png" alt="" />
-                        <img src="public/Mask group2.png" alt="" />
-                        <img src="public/Mask group1.png" alt="" />
+                        <img src="/Mask group.png" alt="" />
+                        <img src="/Mask group2.png" alt="" />
+                        <img src="/Mask group1.png" alt="" />
                     </div>
 
                 </div>
