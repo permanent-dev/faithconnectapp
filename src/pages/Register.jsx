@@ -31,7 +31,7 @@ const Register = () => {
                             <Forms label="full name" />
                             <Forms label="email" />
                             <Forms label="password" typeof="password" />
-                            <button className='buttton'>sign up</button>
+                            <Link to="/dashboard/home"><button className='buttton w-full items-center'>sign up</button></Link>
 
 
                         </form>

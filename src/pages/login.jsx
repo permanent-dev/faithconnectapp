@@ -34,7 +34,7 @@ const Login = () => {
                         <Formheader headers="log in" />
                         <Forms label="username" />
                         <Forms label="password" />
-                        <div ><button className='buttton'>log in</button></div>
+                        <Link to="/dashboard/home"><div ><button className='buttton'>log in</button></div></Link>
 
                     </form>
                     <div className='justify-center grid capitalize border-t-[2px] mt-[2rem]'>
