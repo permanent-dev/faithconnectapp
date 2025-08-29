@@ -11,7 +11,7 @@ export const Blog = () => {
     return (
         <div>
             <div
-                style={{}
+                style={{
                     backgroundImage: "url('/bg_womanblog.png')",
                     backgroundSize: "cover",
                     minHeight: "120vh",
