@@ -1,4 +1,4 @@
-import { ScrollTrigger, SplitText,  } from "gsap/all"
+import { ScrollTrigger, SplitText, } from "gsap/all"
 import gsap from "gsap"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Register from './pages/Register'
@@ -13,9 +13,10 @@ import Book from './pages/Book'
 import Dashboard from './pages/Dashboard'
 import Dashpodcast from './pages/Dashpodcast'
 import Dashbooks from './pages/Dashbooks'
+import SignupForm from "./pages/SIGN-UP"
 
 
-gsap.registerPlugin(ScrollTrigger, SplitText, );
+gsap.registerPlugin(ScrollTrigger, SplitText,);
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
 
     <Router>
       <Routes>
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<SignupForm />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Onboarding />} />
         <Route path='/podcast' element={<Podcast />} />
