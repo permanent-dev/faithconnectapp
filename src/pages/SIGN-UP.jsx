@@ -11,10 +11,10 @@ const SignupForm = () => {
     phone: '',
     password: '',
     confirmPassword: '',
-    dateOfBirth: '',
+    // dateOfBirth: '',
     gender: '',
-    address: '',
-    churchRole: 'member'
+    // address: '',
+    // churchRole: 'member'
   });
 
   const [errors, setErrors] = useState({});
@@ -101,16 +101,16 @@ const SignupForm = () => {
           phone: '',
           password: '',
           confirmPassword: '',
-          dateOfBirth: '',
+          // dateOfBirth: '',
           gender: '',
-          address: '',
-          churchRole: 'member'
+          // address: '',
+          // churchRole: 'member'
         });
 
         // Redirect to dashboard or login page
         setTimeout(() => {
           window.location.href = '/dashboard/home';
-        }, 2000);
+        }, 5000);
       }
 
     } catch (error) {

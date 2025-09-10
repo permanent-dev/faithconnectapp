@@ -31,8 +31,8 @@ class ApiService {
 
 
     // For POST requests, use data instead of body with axios
-    if (options.body) {
-      config.data = JSON.parse(options.body);
+    if (options.data) {
+      config.data = options.data;
     }
 
     try {
@@ -41,6 +41,7 @@ class ApiService {
       return response.data;
 
     } catch (error) {
+      console.error('server response:', error.response?.data);
 
       if (error.response) {
         throw new Error(error.response.data.message || 'Request Failed');
@@ -52,17 +53,21 @@ class ApiService {
 
   // Member signup
   async signupMember(memberData) {
+    // Log the data being sent
+    // console.log('Sending signup data:', memberData);
+
     return this.request('/members/signup', {
       method: 'POST',
-      body: memberData,
+      data: memberData,
     });
   }
 
   // Member login
   async loginMember(credentials) {
+
     return this.request('/members/login', {
       method: 'POST',
-      body: credentials,
+      data: credentials,
     });
   }
 
