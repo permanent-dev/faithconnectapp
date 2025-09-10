@@ -109,7 +109,7 @@ const SignupForm = () => {
 
         // Redirect to dashboard or login page
         setTimeout(() => {
-          window.location.href = '/dashboard/home';
+          window.location.href = '/login';
         }, 5000);
       }
 
