@@ -73,7 +73,12 @@ class ApiService {
 
   // Get member profile
   async getMemberProfile() {
-    return this.request('/members/profile');
+    return this.request('/members/profile'
+      // {
+      //   method: 'GET',
+      //   Headers:`BEARER ${token}`
+      // }
+    );
   }
 }
 

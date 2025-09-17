@@ -16,20 +16,24 @@ import axios from 'axios'
 
 function Recentpods() {
 
-    const [Results, setResults] = useState([]);
-    const [loadData, setloadData] = useState(false)
+    const [Results, setResults] = useState(null);
+    const [loadData, setloadData] = useState(false);
+    let [nextPage, setnextPage] = useState("");
+    let [prevPage, setprevPage] = useState("");
+
 
 
     const podget = async () => {
-
+        setloadData(true);
         try {
+            console.log(loadData);
             const { data } = await axios('https://faith-connect-backend.onrender.com/api/podcasts/');
-            console.log(data);
-            let nextPage = data.next;
-            let prevPage = data.previous;
-            setResults(data.result);
-            console.log(Results);
-            console.log(setloadData(true));
+            // console.log(data);
+            setResults(data.results);
+            setnextPage(data.next); //api to the next paginated data
+            setprevPage(data.previous);   //api to previous pagiated data
+            // console.log(Results);
+
 
 
         } catch (error) {
@@ -45,7 +49,15 @@ function Recentpods() {
     };
     useEffect(() => {
         podget();
-    }, [])
+
+
+    }, []);
+    useEffect(() => {
+        console.log('updated results: ', Results);
+        console.log(nextPage);
+        console.log(prevPage);
+    }, [Results])
+
 
 
 
@@ -56,6 +68,7 @@ function Recentpods() {
 
 
     useGSAP(() => {
+
         gsap.from('#card img',
             {
                 ease: 'power1.inOut',
@@ -81,33 +94,41 @@ function Recentpods() {
                 </h1>
                 <div className='flex items-center mt-4 gap-2 md:gap-10'>
                     <div> <MoveLeftIcon />    </div>
-                    <div id='card' className='card flex gap-8'>
-                        {Results.length > 0 ? (
-                            Results.map((pod,index)=>(
-                                <img
-                                 src={pod.image || "/booksimg1.png" } 
-                                 alt={pod.title}
-                                 className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
+                    <div id='card' className='card w-50% flex gap-3'>
+                        {Array.isArray(Results) && Results.length > 0 ? (
+                            Results.map((pod, index) => (
+                                <div key={pod.id} className='w-full overflow-hidden'>
+                                    <img
+                                        src={pod.cover_image_url || "/booksimg1.png"}
+                                        alt={pod.title}
+                                        className="size-17 md:size-30 rounded-[8px] hover:scale-108"
+                                    />
+                                    <p>{pod.title}</p>
+                                    <p> speaker: {" " + pod.speaker}</p>
+                                </div>
+
+
+
                             ))
 
-                        ):(
+                        ) : (
                             // fallback images
                             <>
-                            <img src="/booksimg1.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
-                        <img src="/booksimg2.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
-                        <img src="/booksimg3.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
-                        <img src="/booksimg2.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
-                        <img src="/booksimg4.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
-                        <img src="/booksimg2.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
+                                <img src="/booksimg1.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
+                                <img src="/booksimg2.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
+                                <img src="/booksimg3.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
+                                <img src="/booksimg2.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
+                                <img src="/booksimg4.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
+                                <img src="/booksimg2.png" alt="" className="size-17 md:size-30 rounded-[8px] hover:scale-108" />
 
 
 
                             </>
-                        ) }
+                        )}
 
 
 
-                        
+
                     </div>
                     <div> <MoveRightIcon />    </div>
                 </div>

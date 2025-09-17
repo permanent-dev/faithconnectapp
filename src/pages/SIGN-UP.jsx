@@ -56,8 +56,8 @@ const SignupForm = () => {
 
     if (!formData.password) {
       newErrors.password = 'Password is required';
-    } else if (formData.password.length < 8) {
-      newErrors.password = 'Password must be at least 8 characters';
+    } else if (formData.password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters';
     }
 
     if (formData.password !== formData.confirmPassword) {
@@ -81,7 +81,7 @@ const SignupForm = () => {
     }
 
     setLoading(true);
-    setSuccess(false);
+
 
     try {
       // Remove confirmPassword from data sent to API
@@ -91,7 +91,7 @@ const SignupForm = () => {
 
       if (response.success) {
         // Store token
-        localStorage.setItem('authToken', response.data.token);
+        // localStorage.setItem('authToken', response.data.token);
 
         setSuccess(true);
         setFormData({
@@ -114,6 +114,7 @@ const SignupForm = () => {
       }
 
     } catch (error) {
+      console.error(error.message);
       setErrors({
         general: error.message || 'Registration failed. Please try again.'
       });
@@ -132,7 +133,7 @@ const SignupForm = () => {
 
       {success && (
         <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
-          Registration successful! Redirecting to dashboard...
+          Registration successful! Redirecting to login...
         </div>
       )}
 
@@ -158,10 +159,11 @@ const SignupForm = () => {
             <input
               type="text"
               name="firstName"
+              autoComplete='firstName'
               value={formData.firstName}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.firstName ? 'border-red-500' : 'border-gray-300'
-                }`}
+              className={`w-full px-3 py-2 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.firstName ? 'border-red-500' : 'border-gray-300'}`
+              }
               placeholder="Enter your first name"
             />
             {errors.firstName && (
@@ -196,6 +198,7 @@ const SignupForm = () => {
             <input
               type="email"
               name="email"
+              autoComplete='email'
               value={formData.email}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.email ? 'border-red-500' : 'border-gray-300'
@@ -215,6 +218,7 @@ const SignupForm = () => {
             <input
               type="tel"
               name="phone"
+              autoComplete='phone-number'
               value={formData.phone}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.phone ? 'border-red-500' : 'border-gray-300'
@@ -234,6 +238,7 @@ const SignupForm = () => {
             <input
               type="password"
               name="password"
+              autoComplete='new-password'
               value={formData.password}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.password ? 'border-red-500' : 'border-gray-300'
@@ -278,7 +283,8 @@ const SignupForm = () => {
               <option value="">Select gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
-              <option value="other">Other</option>
+              <option value="others">Others</option>
+              <option value="miscilleaneous">miscilleaneous</option>
             </select>
           </div>
 
