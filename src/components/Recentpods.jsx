@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import axios from 'axios'
+import { useRef } from 'react'
 
 
 
@@ -68,6 +69,27 @@ function Recentpods() {
 
 
     useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#card",
+                scrub: true,
+                start: "top 50%",
+
+            }
+
+
+
+        })
+
+
+        tl.to('#pod', {
+            translateX: -800,
+            ease: 'expo.out',
+            scale: '4',
+
+
+
+        }, '-=0.5')
 
         gsap.from('#card img',
             {
@@ -82,29 +104,80 @@ function Recentpods() {
     }, [])
 
 
+    const [currentlyPlaying, setCurrentlyPlaying] = useState(null); // Add this state
+    // ...existing state declarations...
+
+    const audioRef = useRef(null); // Add this ref
+
+    const handlePlay = (podId, audioUrl) => {
+        if (currentlyPlaying === podId) {
+            // If clicking the same audio, toggle play/pause
+            if (audioRef.current.paused) {
+                audioRef.current.play();
+            } else {
+                audioRef.current.pause();
+            }
+        } else {
+            // If clicking a different audio, update source and play
+            setCurrentlyPlaying(podId);
+            audioRef.current.src = audioUrl;
+            audioRef.current.play();
+        }
+    };
+
+    // Add these event listeners in a useEffect
+    useEffect(() => {
+        const audio = audioRef.current;
+
+        const handleError = (e) => {
+            console.error('Audio error:', e);
+            setError('Error playing audio');
+            setIsPlaying(false);
+        };
+
+        audio.addEventListener('error', handleError);
+
+        return () => {
+            audio.removeEventListener('error', handleError);
+        };
+    }, []);
+
+
 
 
 
 
     return (
         <div>
+            {/* Add a single audio element that will be reused */}
+            <audio ref={audioRef} />
             <div className='p-2'>
                 <h1 className='uppercase font-bold text-[1.4rem]'>
                     recently played
                 </h1>
                 <div className='flex items-center mt-4 gap-2 md:gap-10'>
-                    <div> <MoveLeftIcon />    </div>
-                    <div id='card' className='card w-50% flex gap-3'>
+                    <div>
+                        <MoveLeftIcon />
+                    </div>
+
+
+                    <div id='card' className='card flex gap-2 overflow-hidden'>
                         {Array.isArray(Results) && Results.length > 0 ? (
-                            Results.map((pod, index) => (
-                                <div key={pod.id} className='w-full overflow-hidden'>
+                            Results.map((pod) => (
+                                <div key={pod.id} id='pod' onClick={handlePlay(pod.id, pod.file_url)}>
+
                                     <img
                                         src={pod.cover_image_url || "/booksimg1.png"}
                                         alt={pod.title}
-                                        className="size-17 md:size-30 rounded-[8px] hover:scale-108"
+                                        className={`
+        size-17 md:size-30 rounded-[8px] hover:scale-108
+        ${currentlyPlaying === pod.id ? 'ring-2 ring-blue-500' : ''}
+        ${isPlaying && currentlyPlaying === pod.id ? 'opacity-75' : ''}
+    `}
                                     />
                                     <p>{pod.title}</p>
                                     <p> speaker: {" " + pod.speaker}</p>
+
                                 </div>
 
 
