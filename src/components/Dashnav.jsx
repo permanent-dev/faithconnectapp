@@ -11,7 +11,7 @@ function Dashnav() {
         { id: 1, name: "dashboard", icon: <House size={45} />, link: '/dashboard/home' },
         { id: 2, name: "podcast", icon: <Podcast size={45} />, link: '/dashboard/podcast' },
         { id: 3, name: "books", icon: <LibraryBigIcon size={45} />, link: '/dashboard/book' },
-        { id: 4, name: "blogs", icon: <Logs size={45} />, link: '/dashboard/blog' }
+        // { id: 4, name: "blogs", icon: <Logs size={45} />, link: '/dashboard/blog' }
     ];
 
 
@@ -32,7 +32,7 @@ function Dashnav() {
                         {isOpen ? <Menu size={45} /> : <Menu size={45} className='mt-[1.8rem]' />}
                     </button>
                 </div>
-                <ul className='flex flex-col gap-12'>
+                <ul className='flex flex-col mb-64 gap-12'>
 
                     {navlinks.map(nav => (
                         <li key={nav.id} className=' capitalize font-bold text-[1.7rem]' >
@@ -54,10 +54,6 @@ function Dashnav() {
                 </ul>
 
 
-                <div>
-
-
-                </div>
                 <div>
                     <Link to="/aboutus">
                         <p className='flex gap-3 capitalize text-[2rem] px-4 mb-2'>

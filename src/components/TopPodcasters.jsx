@@ -31,10 +31,10 @@ const TopPodcasters = () => {
     };
 
     return (
-        <div className="p-5 bg-white rounded-2xl shadow-lg mx-auto w-78 md:w-125">
+        <div className="p-5 bg-white rounded-2xl shadow-lg mx-auto max-h-screen w-78 md:w-125">
             <h2 className="text-lg font-bold mb-4">TOP PODCASTERS</h2>
 
-            <div className="flex flex-col gap-4 mb-12">
+            <div className="flex flex-col gap-4 mb-29">
                 {followState.map((person, index) => (
                     <div key={index} className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
