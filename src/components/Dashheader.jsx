@@ -23,7 +23,7 @@ function Dashheader() {
     useEffect(() => {
 
         const fetchProfile = async () => {
-            const userToken = localStorage.getItem('authToken');
+            // const userToken = localStorage.getItem('authToken');
             setLoading(true)
             try {
                 const result = await apiService.getMemberProfile();
@@ -76,7 +76,7 @@ function Dashheader() {
                         color: 'yellow',
                         fontSize: "3rem",
                     }} >
-                    {userData ? userData.first_name : (<p></p>)}
+                    {userData ? userData.first_name : (<span> </span>)}
                 </p>
 
 
@@ -109,7 +109,7 @@ function Dashheader() {
                             padding: "0 9px",
 
                         }}>
-                            {userData ? (`${userData.first_name}${` `}${userData.last_name}`) : (<p> </p>)}
+                            {userData ? (`${userData.first_name}${` `}${userData.last_name}`) : (` `)}
                             <br />
                             {userData ? userData.email : (` `)}
                         </span>
